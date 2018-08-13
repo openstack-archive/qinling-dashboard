@@ -1,0 +1,58 @@
+{% load i18n %}
+
+<div class="detail">
+  <dl class="dl-horizontal">
+
+    <dt>{% trans "ID" %}</dt>
+    <dd>{{ function.id }}</dd>
+
+    <dt>{% trans "Name" %}</dt>
+    <dd data-display="{{ runtime.name }}">{{ function.name }}</dd>
+
+    <dt>{% trans "Description" %}</dt>
+    <dd>{{ function.description }}</dd>
+
+    <dt>{% trans "Count" %}</dt>
+    <dd>{{ function.count }}</dd>
+
+    <dt>{% trans "Code" %}</dt>
+    <dd>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>{% trans "Source" %}</th>
+            <th>{% trans "Md5sum" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ code.source }}</td>
+            <td>{{ code.md5sum }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </dd>
+
+    <dt>{% trans "Runtime ID" %}</dt>
+    <dd>{{ function.runtime_id }}</dd>
+
+    <dt>{% trans "Entry" %}</dt>
+    <dd>{{ function.entry }}</dd>
+
+    <dt>{% trans "Project ID" %}</dt>
+    <dd>{{ function.project_id }}</dd>
+
+    <dt>{% trans "Created At" %}</dt>
+    <dd>{{ function.created_at|parse_isotime }}</dd>
+
+    <dt>{% trans "Updated At" %}</dt>
+    <dd>{{ function.updated_at|parse_isotime }}</dd>
+
+    <dt>{% trans "CPU (Milli CPU)" %}</dt>
+    <dd>{{ function.cpu }}</dd>
+
+    <dt>{% trans "Memory Size (Bytes)" %}</dt>
+    <dd>{{ function.memory_size }}</dd>
+
+  </dl>
+</div>
