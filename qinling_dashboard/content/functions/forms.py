@@ -17,13 +17,13 @@ from django.urls import reverse
 
 from django.utils.translation import ugettext_lazy as _
 
-from django_file_md5 import calculate_md5
-
 from horizon import exceptions
 from horizon import forms
 from horizon import messages
 
 from qinling_dashboard import api
+
+from qinling_dashboard.utils import calculate_md5
 
 from qinling_dashboard import validators
 

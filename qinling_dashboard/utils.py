@@ -13,9 +13,21 @@
 # This file is to be included for configuring application which relates
 # to orchestration(Heat) functions.
 
+import hashlib
 import json
 
 from django.utils.translation import pgettext_lazy
+
+
+def calculate_md5(target):
+    if not target:
+        return ''
+
+    md5 = hashlib.md5()
+    for chunk in target.chunks():
+        md5.update(chunk)
+
+    return md5.hexdigest()
 
 
 def convert_raw_input_to_api_format(value):
