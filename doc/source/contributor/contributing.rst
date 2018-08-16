@@ -21,7 +21,7 @@ Project Hosting Details
 -------------------------
 
 Bug tracker
-    https://storyboard.openstack.org/#!/project/927
+    https://storyboard.openstack.org/#!/project/1050
 
 Code Hosting
     https://git.openstack.org/cgit/openstack/qinling-dashboard
