@@ -14,4 +14,4 @@ Pull requests submitted through GitHub will be ignored.
 
 Bugs should be filed on StoryBoard, not GitHub and Launchpad:
 
-   https://storyboard.openstack.org/#!/project/992
+   https://storyboard.openstack.org/#!/project/1050
