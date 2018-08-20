@@ -14,8 +14,6 @@ import copy
 
 from django.core.files import uploadedfile
 
-from django_file_md5 import calculate_md5
-
 from django.http import response
 
 from django.urls import reverse
@@ -25,6 +23,7 @@ from django.utils.http import urlunquote
 from qinling_dashboard import api
 from qinling_dashboard.content.functions import forms as project_fm
 from qinling_dashboard.test import helpers as test
+from qinling_dashboard.utils import calculate_md5
 
 import mock
 
