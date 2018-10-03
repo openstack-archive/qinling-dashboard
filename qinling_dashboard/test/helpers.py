@@ -36,10 +36,7 @@ from qinlingclient import client as qinling_client
 # mox import is now optional. If tests depends on mox,
 # mox (or mox3) must be declared in test-requirements.txt.
 import mock
-try:
-    from mox3 import mox  # noqa: F401
-except ImportError:
-    pass
+
 from openstack_auth import user
 from openstack_auth import utils
 from requests.packages.urllib3.connection import HTTPConnection
@@ -63,61 +60,6 @@ wsgi.WSGIRequest.__repr__ = lambda self: "<class 'django.http.HttpRequest'>"
 update_settings = horizon_helpers.update_settings
 IsA = horizon_helpers.IsA
 IsHttpRequest = horizon_helpers.IsHttpRequest
-
-
-def create_stubs(stubs_to_create=None):
-    """decorator to simplify setting up multiple stubs at once via mox
-
-    :param stubs_to_create: methods to stub in one or more modules
-    :type stubs_to_create: dict
-
-    The keys are python paths to the module containing the methods to mock.
-
-    To mock a method in openstack_dashboard/api/nova.py, the key is::
-
-        api.nova
-
-    The values are either a tuple or list of methods to mock in the module
-    indicated by the key.
-
-    For example::
-
-        ('server_list',)
-            -or-
-        ('flavor_list', 'server_list',)
-            -or-
-        ['flavor_list', 'server_list']
-
-    Additionally, multiple modules can be mocked at once::
-
-        {
-            api.nova: ('flavor_list', 'server_list'),
-            api.glance: ('image_list_detailed',),
-        }
-
-    """
-    if stubs_to_create is None:
-        stubs_to_create = {}
-    if not isinstance(stubs_to_create, dict):
-        raise TypeError("create_stub must be passed a dict, but a %s was "
-                        "given." % type(stubs_to_create).__name__)
-
-    def inner_stub_out(fn):
-        @wraps(fn)
-        def instance_stub_out(self, *args, **kwargs):
-            for key in stubs_to_create:
-                if not (isinstance(stubs_to_create[key], tuple) or
-                        isinstance(stubs_to_create[key], list)):
-                    raise TypeError("The values of the create_stub "
-                                    "dict must be lists or tuples, but "
-                                    "is a %s."
-                                    % type(stubs_to_create[key]).__name__)
-
-                for value in stubs_to_create[key]:
-                    self.mox.StubOutWithMock(key, value)
-            return fn(self, *args, **kwargs)
-        return instance_stub_out
-    return inner_stub_out
 
 
 def create_mocks(target_methods):
@@ -239,8 +181,6 @@ class TestCase(horizon_helpers.TestCase):
       docs for
       :class:`~openstack_dashboard.test.test_data.utils.TestData`
       for more information.
-    * The ``mox`` mocking framework via ``self.mox``.
-      if ``use_mox`` attribute is set to True.
     * A set of request context data via ``self.context``.
     * A ``RequestFactory`` class which supports Django's ``contrib.messages``
       framework via ``self.factory``.
@@ -518,21 +458,20 @@ class APITestCase(TestCase):
     def stub_keystoneclient(self):
         self._warn_client('keystone', 'Stein')
         if not hasattr(self, "keystoneclient"):
-            self.mox.StubOutWithMock(keystone_client, 'Client')
-            # NOTE(saschpe): Mock properties, MockObject.__init__ ignores them:
+            keystone_client.Client = mock.Mock()
             keystone_client.Client.auth_token = 'foo'
             keystone_client.Client.service_catalog = None
             keystone_client.Client.tenant_id = '1'
             keystone_client.Client.tenant_name = 'tenant_1'
             keystone_client.Client.management_url = ""
             keystone_client.Client.__dir__ = lambda: []
-            self.keystoneclient = self.mox.CreateMock(keystone_client.Client)
+            self.keystoneclient = keystone_client.Client
         return self.keystoneclient
 
     def stub_qinlingclient(self):
         if not hasattr(self, "qinlingclient"):
-            self.mox.StubOutWithMock(qinling_client, 'Client')
-            self.qinlingclient = self.mox.CreateMock(qinling_client.Client)
+            qinling_client.Client = mock.Mock()
+            self.qinlingclient = qinling_client.Client
         return self.qinlingclient
 
 
