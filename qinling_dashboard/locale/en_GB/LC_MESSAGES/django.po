@@ -1,0 +1,449 @@
+# Andi Chandler <andi@gowling.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: qinling-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-10-03 06:53+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-10-07 08:26+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"Language-Team: English (United Kingdom)\n"
+"Language: en_GB\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "1st character is not valid."
+msgstr "1st character is not valid."
+
+msgctxt "current status of runtime"
+msgid "Available"
+msgstr "Available"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CPU  (Milli CPU)"
+msgstr "CPU  (Milli CPU)"
+
+msgid "CPU (Milli CPU)"
+msgstr "CPU (Milli CPU)"
+
+msgctxt "current status of runtime"
+msgid "Cancelled"
+msgstr "Cancelled"
+
+msgid "Check this item if you would like sync execution."
+msgstr "Check this item if you would like sync execution."
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Code Type"
+msgstr "Code Type"
+
+msgid "Code Type can not be changed when you update function."
+msgstr "Code Type can not be changed when you update function."
+
+msgid "Code package zip file path."
+msgstr "Code package zip file path."
+
+msgid "Container name in Swift."
+msgstr "Container name in Swift."
+
+msgid "Count"
+msgstr "Count"
+
+msgid "Create Execution"
+msgstr "Create Execution"
+
+msgid "Create Function"
+msgstr "Create Function"
+
+msgid "Create Function Version"
+msgstr "Create Function Version"
+
+msgid "Create Version"
+msgstr "Create Version"
+
+msgid "Create a new execution of function."
+msgstr "Create a new execution of function."
+
+msgid "Create a new function."
+msgstr "Create a new function."
+
+msgid "Create a new version of function."
+msgstr "Create a new version of function."
+
+msgid "Created At"
+msgstr "Created At"
+
+#, python-format
+msgid "Created execution of \"%s\""
+msgstr "Created execution of \"%s\""
+
+#, python-format
+msgid "Created function \"%s\""
+msgstr "Created function \"%s\""
+
+#, python-format
+msgid "Created new version of \"%s\""
+msgstr "Created new version of \"%s\""
+
+msgctxt "current status of runtime"
+msgid "Creating"
+msgstr "Creating"
+
+msgid "Delete Execution"
+msgid_plural "Delete Executions"
+msgstr[0] "Delete Execution"
+msgstr[1] "Delete Executions"
+
+msgid "Delete Function"
+msgid_plural "Delete Functions"
+msgstr[0] "Delete Function"
+msgstr[1] "Delete Functions"
+
+msgid "Delete Function Version"
+msgid_plural "Delete Function Versions"
+msgstr[0] "Delete Function Version"
+msgstr[1] "Delete Function Versions"
+
+msgid "Deleted executions are not recoverable."
+msgstr "Deleted executions are not recoverable."
+
+msgid "Deleted function versions are not recoverable."
+msgstr "Deleted function versions are not recoverable."
+
+msgid "Deleted functions are not recoverable."
+msgstr "Deleted functions are not recoverable."
+
+msgctxt "current status of runtime"
+msgid "Deleting"
+msgstr "Deleting"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Description:"
+msgstr "Description:"
+
+msgctxt "current status of runtime"
+msgid "Done"
+msgstr "Done"
+
+msgid "Download Function"
+msgstr "Download Function"
+
+msgid "Duration"
+msgstr "Duration"
+
+msgid "Entry"
+msgstr "Entry"
+
+msgctxt "current status of runtime"
+msgid "Error"
+msgstr "Error"
+
+#, python-format
+msgid "Error because file not found function: %s"
+msgstr "Error because file not found function: %s"
+
+#, python-format
+msgid "Error downloading function: %s"
+msgstr "Error downloading function: %s"
+
+msgid "Execution Details"
+msgstr "Execution Details"
+
+msgid "Execution Details: {{ resource_name }}"
+msgstr "Execution Details: {{ resource_name }}"
+
+msgid "Execution Logs"
+msgstr "Execution Logs"
+
+msgid "Executions"
+msgstr "Executions"
+
+msgid "Executions of this function"
+msgstr "Executions of this function"
+
+msgctxt "current status of runtime"
+msgid "Failed"
+msgstr "Failed"
+
+msgid "Function"
+msgstr "Function"
+
+msgid "Function Details"
+msgstr "Function Details"
+
+msgid "Function Details: {{ resource_name }}"
+msgstr "Function Details: {{ resource_name }}"
+
+msgid "Function Engine"
+msgstr "Function Engine"
+
+msgid "Function ID"
+msgstr "Function ID"
+
+msgid "Function Version"
+msgstr "Function Version"
+
+msgid "Function Version Details"
+msgstr "Function Version Details"
+
+msgid ""
+"Function Version Details: {{ version.function_id }} (Version "
+"Number={{ version_number }})"
+msgstr ""
+"Function Version Details: {{ version.function_id }} (Version "
+"Number={{ version_number }})"
+
+msgid "Function entry in the format of <module_name>.<method_name>"
+msgstr "Function entry in the format of <module_name>.<method_name>"
+
+msgid "Function to execute."
+msgstr "Function to execute."
+
+msgid "Function which new version will be created."
+msgstr "Function which new version will be created."
+
+msgid "Functions"
+msgstr "Functions"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Id"
+msgstr "Id"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Image name in Docker hub."
+msgstr "Image name in Docker hub."
+
+msgid "Input"
+msgstr "Input"
+
+msgid "Invalid character is used or exceeding maximum length."
+msgstr "Invalid character is used or exceeding maximum length."
+
+msgid "Is Public"
+msgstr "Is Public"
+
+msgid "Last character is not valid."
+msgstr "Last character is not valid."
+
+msgid "Limit of cpu resource(unit: millicpu). Range: {0} ~ {1}"
+msgstr "Limit of CPU resource(unit: millicpu). Range: {0} ~ {1}"
+
+msgid "Limit of memory resource(unit: bytes). Range: {0} ~ {1} (bytes)."
+msgstr "Limit of memory resource(unit: bytes). Range: {0} ~ {1} (bytes)."
+
+msgid "Md5sum"
+msgstr "MD5sum"
+
+msgid "Memory Size"
+msgstr "Memory Size"
+
+msgid "Memory Size (Bytes)"
+msgstr "Memory Size (Bytes)"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "No functions available."
+msgstr "No functions available."
+
+msgid "No runtimes found"
+msgstr "No runtimes found"
+
+msgid "Not key-value pair."
+msgstr "Not key-value pair."
+
+msgid "Object name in Swift."
+msgstr "Object name in Swift."
+
+msgid "Output"
+msgstr "Output"
+
+msgid "Overview"
+msgstr "Overview"
+
+msgid "Package"
+msgstr "Package"
+
+msgctxt "current status of runtime"
+msgid "Paused"
+msgstr "Paused"
+
+msgid "Project ID"
+msgstr "Project ID"
+
+msgid "Result"
+msgstr "Result"
+
+msgctxt "current status of runtime"
+msgid "Running"
+msgstr "Running"
+
+msgid "Runtime"
+msgstr "Runtime"
+
+msgid "Runtime Details"
+msgstr "Runtime Details"
+
+msgid "Runtime Details: {{ resource_name }}"
+msgstr "Runtime Details: {{ resource_name }}"
+
+msgid "Runtime ID"
+msgstr "Runtime ID"
+
+msgid "Runtimes"
+msgstr "Runtimes"
+
+msgid "Select Your Code Type."
+msgstr "Select Your Code Type."
+
+msgid "Show Execution Logs"
+msgstr "Show Execution Logs"
+
+msgid "Source"
+msgstr "Source"
+
+msgid ""
+"Specify input parmeters like name1=value2. One line is equivalent of one "
+"input parameter."
+msgstr ""
+"Specify input parameters like name1=value2. One line is equivalent of one "
+"input parameter."
+
+msgid "Status"
+msgstr "Status"
+
+msgctxt "current status of runtime"
+msgid "Success"
+msgstr "Success"
+
+msgid "Swift Container"
+msgstr "Swift Container"
+
+msgid "Swift Object"
+msgstr "Swift Object"
+
+msgid "Sync"
+msgstr "Sync"
+
+#, python-format
+msgid "This function does not have specified version number: %s"
+msgstr "This function does not have specified version number: %s"
+
+msgid "Unable to create execution"
+msgstr "Unable to create execution"
+
+#, python-format
+msgid "Unable to create execution. %s"
+msgstr "Unable to create execution. %s"
+
+msgid "Unable to create function."
+msgstr "Unable to create function."
+
+#, python-format
+msgid "Unable to get executions of this function \"%s\"."
+msgstr "Unable to get executions of this function \"%s\"."
+
+#, python-format
+msgid "Unable to get versions of this function \"%s\"."
+msgstr "Unable to get versions of this function \"%s\"."
+
+#, python-format
+msgid "Unable to load the specified function. %s"
+msgstr "Unable to load the specified function. %s"
+
+#, python-format
+msgid "Unable to retrieve details for Function \"%s\"."
+msgstr "Unable to retrieve details for Function \"%s\"."
+
+#, python-format
+msgid "Unable to retrieve details for Runtime \"%s\"."
+msgstr "Unable to retrieve details for Runtime \"%s\"."
+
+#, python-format
+msgid "Unable to retrieve details for execution \"%s\"."
+msgstr "Unable to retrieve details for execution \"%s\"."
+
+#, python-format
+msgid "Unable to retrieve details for function version \"%s\"."
+msgstr "Unable to retrieve details for function version \"%s\"."
+
+msgid "Unable to retrieve execution logs."
+msgstr "Unable to retrieve execution logs."
+
+msgid "Unable to retrieve executions list."
+msgstr "Unable to retrieve executions list."
+
+msgid "Unable to retrieve function details."
+msgstr "Unable to retrieve function details."
+
+msgid "Unable to retrieve functions list."
+msgstr "Unable to retrieve functions list."
+
+msgid "Unable to retrieve runtimes list."
+msgstr "Unable to retrieve runtimes list."
+
+msgid "Unable to retrieve runtimes."
+msgstr "Unable to retrieve runtimes."
+
+#, python-format
+msgid "Unable to update function %s"
+msgstr "Unable to update function %s"
+
+msgid "Unknown"
+msgstr "Unknown"
+
+msgid "Update Function"
+msgstr "Update Function"
+
+msgid "Update function."
+msgstr "Update function."
+
+msgid "Updated At"
+msgstr "Updated At"
+
+#, python-format
+msgid "Updated function \"%s\""
+msgstr "Updated function \"%s\""
+
+msgctxt "current status of runtime"
+msgid "Upgrading"
+msgstr "Upgrading"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Version Number"
+msgstr "Version Number"
+
+msgid "Version detail"
+msgstr "Version detail"
+
+msgid "Versions"
+msgstr "Versions"
+
+msgid "Versions of this function"
+msgstr "Versions of this function"
+
+msgid "You must specify Docker image."
+msgstr "You must specify Docker image."
+
+msgid "You must specify container and object both in case code type is Swift."
+msgstr "You must specify container and object both in case code type is Swift."
+
+msgid "You must specify package file."
+msgstr "You must specify package file."
+
+msgid "You must specify runtime."
+msgstr "You must specify runtime."
