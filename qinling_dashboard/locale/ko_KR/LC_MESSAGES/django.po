@@ -1,0 +1,453 @@
+# ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
+# SEEUNG KANG <seeung0305@naver.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: qinling-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-10-16 00:59+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-11-05 11:13+0000\n"
+"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
+"Language-Team: Korean (South Korea)\n"
+"Language: ko_KR\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "1st character is not valid."
+msgstr "첫번째 문자가 올바르지 않습니다."
+
+msgctxt "current status of runtime"
+msgid "Available"
+msgstr "사용 가능"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CPU  (Milli CPU)"
+msgstr "CPU  (Milli CPU)"
+
+msgid "CPU (Milli CPU)"
+msgstr "CPU  (Milli CPU)"
+
+msgctxt "current status of runtime"
+msgid "Cancelled"
+msgstr "취소됨"
+
+msgid "Check this item if you would like sync execution."
+msgstr "싱크 실행을 하려면 이 항목을 확인하세요."
+
+msgid "Code"
+msgstr "코드"
+
+msgid "Code Type"
+msgstr "코드 타입"
+
+msgid "Code Type can not be changed when you update function."
+msgstr "기능을 업데이트하면 코드 타입을 바꿀 수 없습니다."
+
+msgid "Code package zip file path."
+msgstr "코드 패키지 압축 파일 경로"
+
+msgid "Container name in Swift."
+msgstr "Swift에서의 컨테이너 이름"
+
+msgid "Count"
+msgstr "개수"
+
+msgid "Create Execution"
+msgstr "실행 생성"
+
+msgid "Create Function"
+msgstr "기능 생성"
+
+msgid "Create Function Version"
+msgstr "기능 버전 생성"
+
+msgid "Create Version"
+msgstr "버전 생성"
+
+msgid "Create a new execution of function."
+msgstr "새로운 기능의 실행 생성"
+
+msgid "Create a new function."
+msgstr "새로운 기능 생성"
+
+msgid "Create a new version of function."
+msgstr "새로운 버전의 기능 생성"
+
+msgid "Created At"
+msgstr "생성 시점"
+
+#, python-format
+msgid "Created execution of \"%s\""
+msgstr "\"%s\"을 실행 생성"
+
+#, python-format
+msgid "Created function \"%s\""
+msgstr "기능 생성 \"%s\""
+
+#, python-format
+msgid "Created new version of \"%s\""
+msgstr "새로운 버전\"%s\" 생성"
+
+msgctxt "current status of runtime"
+msgid "Creating"
+msgstr "생성 중"
+
+msgid "Delete Execution"
+msgid_plural "Delete Executions"
+msgstr[0] ""
+"실행 삭제\n"
+"실행 삭제"
+
+msgid "Delete Function"
+msgid_plural "Delete Functions"
+msgstr[0] ""
+"기능 삭제\n"
+"기능들 삭제"
+
+msgid "Delete Function Version"
+msgid_plural "Delete Function Versions"
+msgstr[0] ""
+"삭제된 기능 버전\n"
+"삭제된 기능 버전들"
+
+msgid "Deleted executions are not recoverable."
+msgstr "삭제된 실행은 되살릴 수 없습니다."
+
+msgid "Deleted function versions are not recoverable."
+msgstr "삭제된 기능 버전은 되살릴 수 없습니다."
+
+msgid "Deleted functions are not recoverable."
+msgstr "삭제된 기능은 되살릴 수 없습니다."
+
+msgctxt "current status of runtime"
+msgid "Deleting"
+msgstr "삭제 중"
+
+msgid "Description"
+msgstr "설명"
+
+msgid "Description:"
+msgstr "설명:"
+
+msgctxt "current status of runtime"
+msgid "Done"
+msgstr "완료"
+
+msgid "Download Function"
+msgstr "기능 다운로드"
+
+msgid "Duration"
+msgstr "기간"
+
+msgid "Entry"
+msgstr "진입점"
+
+msgctxt "current status of runtime"
+msgid "Error"
+msgstr "오류"
+
+#, python-format
+msgid "Error because file not found function: %s"
+msgstr "파일이 발견되지 않은 오류:%s"
+
+#, python-format
+msgid "Error downloading function: %s"
+msgstr "기능 다운로드 오류:%s"
+
+msgid "Execution Details"
+msgstr "운영 정보"
+
+msgid "Execution Details: {{ resource_name }}"
+msgstr "실행 정보: {{ resource_name }}"
+
+msgid "Execution Logs"
+msgstr "운영 로그"
+
+msgid "Executions"
+msgstr "실행"
+
+msgid "Executions of this function"
+msgstr "이 기능을 실행"
+
+msgctxt "current status of runtime"
+msgid "Failed"
+msgstr "실패함"
+
+msgid "Function"
+msgstr "기능"
+
+msgid "Function Details"
+msgstr "기능 세부사항"
+
+msgid "Function Details: {{ resource_name }}"
+msgstr "기능 세부사항:{{ resource_name }}"
+
+msgid "Function Engine"
+msgstr "기능 엔진"
+
+msgid "Function ID"
+msgstr "기능 ID"
+
+msgid "Function Version"
+msgstr "기능 버전"
+
+msgid "Function Version Details"
+msgstr "기능 버전 세부사항"
+
+msgid ""
+"Function Version Details: {{ version.function_id }} (Version "
+"Number={{ version_number }})"
+msgstr ""
+"기능 버전 세부사항: {{ version.function_id }} (Version "
+"Number={{ version_number }})"
+
+msgid "Function entry in the format of <module_name>.<method_name>"
+msgstr "기능 진입점 형태는 <module_name>.<method_name> "
+
+msgid "Function to execute."
+msgstr "실행할 기능"
+
+msgid "Function which new version will be created."
+msgstr "새로운 버전이 생성될 기능"
+
+msgid "Functions"
+msgstr "기능"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Id"
+msgstr "ID"
+
+msgid "Image"
+msgstr "이미지"
+
+msgid "Image name in Docker hub."
+msgstr "도커 허브에서의 이미지 이름"
+
+msgid "Input"
+msgstr "입력"
+
+msgid "Invalid character is used or exceeding maximum length."
+msgstr "올바르지 않은 문자가 사용되거나 길이가 최대값보다 큽니다."
+
+msgid "Is Public"
+msgstr "공개 여부"
+
+msgid "Last character is not valid."
+msgstr "마지막 문자가 올바르지 않습니다."
+
+msgid "Limit of cpu resource(unit: millicpu). Range: {0} ~ {1}"
+msgstr "CPU 자원 제한(단위: millicpu). 범위: {0} ~ {1}"
+
+msgid "Limit of memory resource(unit: bytes). Range: {0} ~ {1} (bytes)."
+msgstr "메모리 자원 제한(단위: bytes). 범위: {0} ~ {1} (bytes)."
+
+msgid "Md5sum"
+msgstr "Md5sum"
+
+msgid "Memory Size"
+msgstr "메모리 크기"
+
+msgid "Memory Size (Bytes)"
+msgstr "메모리 크기(Bytes)"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "No functions available."
+msgstr "사용 가능한 기능이 없습니다."
+
+msgid "No runtimes found"
+msgstr "런타임을 찾지 못했습니다."
+
+msgid "Not key-value pair."
+msgstr "키값이 맞지 않습니다."
+
+msgid "Object name in Swift."
+msgstr "Swift에서의 오브젝트 이름"
+
+msgid "Output"
+msgstr "출력"
+
+msgid "Overview"
+msgstr "개요"
+
+msgid "Package"
+msgstr "패키지"
+
+msgctxt "current status of runtime"
+msgid "Paused"
+msgstr "정지함"
+
+msgid "Project ID"
+msgstr "프로젝트 ID"
+
+msgid "Result"
+msgstr "결과"
+
+msgctxt "current status of runtime"
+msgid "Running"
+msgstr "실행중"
+
+msgid "Runtime"
+msgstr "런타임"
+
+msgid "Runtime Details"
+msgstr "런타임 세부사항"
+
+msgid "Runtime Details: {{ resource_name }}"
+msgstr "런타임 세부사항: {{ resource_name }}"
+
+msgid "Runtime ID"
+msgstr "런타임 ID"
+
+msgid "Runtimes"
+msgstr "런타임"
+
+msgid "Select Your Code Type."
+msgstr "코드 타입을 선택하세요."
+
+msgid "Show Execution Logs"
+msgstr "운영 로그를 나타냄"
+
+msgid "Source"
+msgstr "소스"
+
+msgid ""
+"Specify input parmeters like name1=value2. One line is equivalent of one "
+"input parameter."
+msgstr ""
+"name1=value2처럼 입력 매개변수를 지정하시오.  한 줄이 하나의 매개변수와 같습"
+"니다."
+
+msgid "Status"
+msgstr "상태"
+
+msgctxt "current status of runtime"
+msgid "Success"
+msgstr "완료"
+
+msgid "Swift Container"
+msgstr "Swift 컨테이너"
+
+msgid "Swift Object"
+msgstr "Swift 오브젝트"
+
+msgid "Sync"
+msgstr "싱크"
+
+#, python-format
+msgid "This function does not have specified version number: %s"
+msgstr "이 기능은 지정된 버전 숫자가 없습니다:%s"
+
+msgid "Unable to create execution"
+msgstr "실행 생성 실패"
+
+#, python-format
+msgid "Unable to create execution. %s"
+msgstr "실행 생성을 할 수 없습니다.%s"
+
+msgid "Unable to create function."
+msgstr "기능을 생성하는데 실패하였습니다."
+
+#, python-format
+msgid "Unable to get executions of this function \"%s\"."
+msgstr "기능 \"%s\"의 실행을 가져오지 못했습니다."
+
+#, python-format
+msgid "Unable to get versions of this function \"%s\"."
+msgstr "기능 \"%s\"의 버전을 가져오지 못했습니다."
+
+#, python-format
+msgid "Unable to load the specified function. %s"
+msgstr "지정된 기능을 불러올 수 없습니다.%s"
+
+#, python-format
+msgid "Unable to retrieve details for Function \"%s\"."
+msgstr "기능 \"%s\"의 세부사항을 가져오지 못했습니다."
+
+#, python-format
+msgid "Unable to retrieve details for Runtime \"%s\"."
+msgstr "런타임 \"%s\"에 대한 세부사항을 가져오지 못했습니다."
+
+#, python-format
+msgid "Unable to retrieve details for execution \"%s\"."
+msgstr "\"%s\" 실행에 대한 정보를 찾을 수 없습니다."
+
+#, python-format
+msgid "Unable to retrieve details for function version \"%s\"."
+msgstr "기능 버전\"%s\"의 세부사항을 가져오지 못했습니다."
+
+msgid "Unable to retrieve execution logs."
+msgstr "실행 로그를 찾아올 수 없습니다."
+
+msgid "Unable to retrieve executions list."
+msgstr "실행 목록을 찾을 수 없습니다."
+
+msgid "Unable to retrieve function details."
+msgstr "기능 세부사항을 가져오지 못했습니다."
+
+msgid "Unable to retrieve functions list."
+msgstr "기능 리스트를 가져오지 못했습니다."
+
+msgid "Unable to retrieve runtimes list."
+msgstr "런타임 리스트를 가져오지 못했습니다."
+
+msgid "Unable to retrieve runtimes."
+msgstr "런타임을 가져오지 못했습니다."
+
+#, python-format
+msgid "Unable to update function %s"
+msgstr "기능 갱신 실패 \"%s\""
+
+msgid "Unknown"
+msgstr "알 수 없음"
+
+msgid "Update Function"
+msgstr "기능 갱신"
+
+msgid "Update function."
+msgstr "기능 갱신"
+
+msgid "Updated At"
+msgstr "갱신 시점"
+
+#, python-format
+msgid "Updated function \"%s\""
+msgstr "갱신된 기능 \"%s\""
+
+msgctxt "current status of runtime"
+msgid "Upgrading"
+msgstr "업그레이드하는 중"
+
+msgid "Version"
+msgstr "버전"
+
+msgid "Version Number"
+msgstr "버전 번호"
+
+msgid "Version detail"
+msgstr "버전 세부사항"
+
+msgid "Versions"
+msgstr "버전"
+
+msgid "Versions of this function"
+msgstr "이 기능의 버전"
+
+msgid "You must specify Docker image."
+msgstr "Docker 이미지를 지정해야 합니다."
+
+msgid "You must specify container and object both in case code type is Swift."
+msgstr "코드 타입이 Swift인 경우에 컨테이너와 오브젝트를 지정해야 합니다."
+
+msgid "You must specify package file."
+msgstr "패키지 파일을 지정해야 합니다."
+
+msgid "You must specify runtime."
+msgstr "런타임을 지정해야 합니다."
