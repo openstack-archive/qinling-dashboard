@@ -18,4 +18,5 @@ urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^(?P<runtime_id>[^/]+)/$',
         views.DetailView.as_view(), name='detail'),
+    url(r'^create', views.CreateRuntimeView.as_view(), name='create'),
 ]

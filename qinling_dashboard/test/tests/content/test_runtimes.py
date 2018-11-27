@@ -28,6 +28,55 @@ class RuntimesTests(test.TestCase):
 
     @test.create_mocks({
         api.qinling: [
+            'runtime_create',
+        ]})
+    def test_execution_create_with_maximum_params(self):
+        data_runtime = self.runtimes.first()
+
+        self.mock_runtime_create.return_value = data_runtime
+
+        image_name = 'dummy/dockerimage'
+        form_data = {'image': image_name,
+                     'name': 'test_name',
+                     'description': 'description',
+                     'untrusted': 'on'}
+
+        url = reverse('horizon:project:runtimes:create')
+        res = self.client.post(url, form_data)
+
+        self.assertNoFormErrors(res)
+        self.assertRedirectsNoFollow(res, INDEX_URL)
+
+        self.mock_runtime_create.assert_called_once_with(
+            test.IsHttpRequest(),
+            image=image_name,
+            name='test_name',
+            description='description',
+            trusted=False)
+
+    @test.create_mocks({
+        api.qinling: [
+            'runtime_create',
+        ]})
+    def test_execution_create_with_minimum_params(self):
+        data_runtime = self.runtimes.first()
+
+        self.mock_runtime_create.return_value = data_runtime
+
+        image_name = 'dummy/dockerimage'
+        form_data = {'image': image_name}
+
+        url = reverse('horizon:project:runtimes:create')
+        res = self.client.post(url, form_data)
+
+        self.assertNoFormErrors(res)
+        self.assertRedirectsNoFollow(res, INDEX_URL)
+
+        self.mock_runtime_create.assert_called_once_with(
+            test.IsHttpRequest(), image=image_name)
+
+    @test.create_mocks({
+        api.qinling: [
             'runtimes_list',
         ]})
     def test_index(self):

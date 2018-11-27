@@ -19,6 +19,16 @@ from qinling_dashboard import api
 from qinling_dashboard import utils
 
 
+class CreateRuntime(tables.LinkAction):
+    name = "create"
+    verbose_name = _("Create Runtime")
+    url = "horizon:project:runtimes:create"
+    classes = ("ajax-modal", "btn-create")
+    policy_rules = (("function_engine", "runtime:create"),)
+    icon = "plus"
+    ajax = True
+
+
 class RuntimesFilterAction(tables.FilterAction):
 
     def filter(self, table, runtimes, filter_string):
@@ -78,4 +88,5 @@ class RuntimesTable(tables.DataTable):
         status_columns = ["status"]
         multi_select = True
         row_class = UpdateRow
-        table_actions = (RuntimesFilterAction,)
+        table_actions = (CreateRuntime,
+                         RuntimesFilterAction,)

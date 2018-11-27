@@ -15,13 +15,24 @@ from django.urls import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
 
 from horizon import exceptions
+from horizon import forms
 from horizon import tables
 from horizon import tabs
 from horizon.utils import memoized
 
 from qinling_dashboard import api
+from qinling_dashboard.content.runtimes import forms as project_forms
 from qinling_dashboard.content.runtimes import tables as project_tables
 from qinling_dashboard.content.runtimes import tabs as project_tabs
+
+
+class CreateRuntimeView(forms.ModalFormView):
+
+    form_class = project_forms.CreateRuntimeForm
+    modal_header = submit_label = page_title = _("Create Runtime")
+    template_name = 'project/runtimes/create.html'
+    submit_url = reverse_lazy("horizon:project:runtimes:create")
+    success_url = reverse_lazy("horizon:project:runtimes:index")
 
 
 class IndexView(tables.DataTableView):

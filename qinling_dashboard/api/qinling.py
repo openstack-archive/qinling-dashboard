@@ -52,6 +52,11 @@ def runtime_get(request, runtime_id):
     return qinlingclient(request).runtimes.get(runtime_id)
 
 
+def runtime_create(request, **params):
+    resource = qinlingclient(request).runtimes.create(**params)
+    return resource
+
+
 def set_code(datum):
     if isinstance(datum.code, six.string_types):
         code_dict = json.loads(datum.code)
