@@ -23,6 +23,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 extensions = [
     'sphinx.ext.autodoc',
     'openstackdocstheme',
+    'sphinxcontrib.rsvgconverter',
     # 'sphinx.ext.intersphinx',
 ]
 
@@ -68,14 +69,29 @@ html_theme = 'openstackdocs'
 # Output file base name for HTML help builder.
 htmlhelp_basename = '%sdoc' % project
 
+# -- Options for LaTeX output ---------------------------------------------
+
+# Disable usage of xindy https://bugzilla.redhat.com/show_bug.cgi?id=1643664
+latex_use_xindy = False
+
+latex_domain_indices = False
+
+latex_elements = {
+    'makeindex': '',
+    'printindex': '',
+    'preamble': r'\setcounter{tocdepth}{3}',
+}
+
 # Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title, author, documentclass
-# [howto/manual]).
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+# NOTE: Specify toctree_only=True for a better document structure of
+# the generated PDF file.
 latex_documents = [
     ('index',
-     '%s.tex' % project,
+     'doc-qinling-dashboard.tex',
      u'%s Documentation' % project,
-     u'OpenStack Developers', 'manual'),
+     u'OpenStack Developers', 'manual', True),
 ]
 
 man_pages = [
