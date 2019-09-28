@@ -1,6 +1,6 @@
-============================
-Heat Dashboard Release Notes
-============================
+===============================
+Qinling Dashboard Release Notes
+===============================
 
 .. toctree::
    :maxdepth: 1
