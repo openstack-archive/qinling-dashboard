@@ -27,7 +27,6 @@ from qinling_dashboard.utils import calculate_md5
 
 import mock
 
-import six
 
 INDEX_TEMPLATE = 'horizon/common/_data_table_view.html'
 INDEX_URL = reverse('horizon:project:functions:index')
@@ -45,7 +44,7 @@ FULL_FORM = {
     "image": "",
 }
 
-FILE_CONTENT = six.b('DUMMY_FILE')
+FILE_CONTENT = b'DUMMY_FILE'
 
 
 class FunctionsTests(test.TestCase):
