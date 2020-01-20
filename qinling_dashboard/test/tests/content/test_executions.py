@@ -212,7 +212,7 @@ class ExecutionsTests(test.TestCase):
 
         self.assertTemplateUsed(res, INDEX_TEMPLATE)
         executions = res.context['executions_table'].data
-        self.assertItemsEqual(executions, self.executions.list())
+        self.assertCountEqual(executions, self.executions.list())
 
         qclient.function_executions.list.assert_called_once_with()
 

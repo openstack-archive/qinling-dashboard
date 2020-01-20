@@ -28,7 +28,7 @@ class QinlingApiTests(test.APIMockTestCase):
         qclient.runtimes.list.return_value = runtimes
 
         result = api.qinling.runtimes_list(self.request)
-        self.assertItemsEqual(result, runtimes)
+        self.assertCountEqual(result, runtimes)
 
         qclient.runtimes.list.assert_called_once_with()
 
@@ -96,7 +96,7 @@ class QinlingApiTests(test.APIMockTestCase):
         qclient.functions.list.return_value = functions
 
         result = api.qinling.functions_list(self.request)
-        self.assertItemsEqual(result, functions)
+        self.assertCountEqual(result, functions)
 
         qclient.functions.list.assert_called_once_with()
 
@@ -189,7 +189,7 @@ class QinlingApiTests(test.APIMockTestCase):
         qclient.function_executions.list.return_value = executions
 
         result = api.qinling.executions_list(self.request)
-        self.assertItemsEqual(result, executions)
+        self.assertCountEqual(result, executions)
 
         qclient.function_executions.list.assert_called_once_with()
 
@@ -223,7 +223,7 @@ class QinlingApiTests(test.APIMockTestCase):
 
         result = api.qinling.versions_list(self.request,
                                            this_function_id)
-        self.assertItemsEqual(result, my_versions)
+        self.assertCountEqual(result, my_versions)
 
         qclient.function_versions.list.\
             assert_called_once_with(this_function_id)

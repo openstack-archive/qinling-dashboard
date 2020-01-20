@@ -748,7 +748,7 @@ class FunctionsTests(test.TestCase):
         api_functions = api.qinling.functions_list(self.request)
 
         calls = [(), ()]  # called twice, without any argument.
-        self.assertItemsEqual(result_functions, api_functions)
+        self.assertCountEqual(result_functions, api_functions)
         qclient.functions.list.assert_has_calls(calls)
 
     @test.create_mocks({

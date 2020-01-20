@@ -87,7 +87,7 @@ class RuntimesTests(test.TestCase):
 
         self.assertTemplateUsed(res, INDEX_TEMPLATE)
         runtimes = res.context['runtimes_table'].data
-        self.assertItemsEqual(runtimes, self.runtimes.list())
+        self.assertCountEqual(runtimes, self.runtimes.list())
 
         self.mock_runtimes_list.assert_has_calls(
             [
