@@ -12,8 +12,6 @@
 
 import json
 
-import six
-
 from django.conf import settings
 
 from horizon.utils.memoized import memoized
@@ -58,7 +56,7 @@ def runtime_create(request, **params):
 
 
 def set_code(datum):
-    if isinstance(datum.code, six.string_types):
+    if isinstance(datum.code, str):
         code_dict = json.loads(datum.code)
         setattr(datum, "code", code_dict)
 
@@ -110,7 +108,7 @@ def function_download(request, function_id):
 
 
 def set_result(datum):
-    if isinstance(datum.result, six.string_types):
+    if isinstance(datum.result, str):
         result_dict = json.loads(datum.result)
         setattr(datum, "result", result_dict)
 
