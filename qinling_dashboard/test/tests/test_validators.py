@@ -42,15 +42,15 @@ def provider_validate_key_value_pairs():
         {'d': u'k=v', 'raise': False},
         # upper limit
         {'d': u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345'
-              u'6789!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstu'
+              u'6789!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstu'
               u'vwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;'
-              u'<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR'
+              u'<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR'
               u'STUVWXYZ0123456789!"#$%=v', 'raise': False},
         # upper limit +1
         {'d': u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567'
-              u'89!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxy'
+              u'89!"#$%&\'()*+,-./:;<F>?@[\\] ^_`{|}~abcdefghijklmnopqrstuvwxy'
               u'zABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@'
-              u'[\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX'
+              u'[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX'
               u'YZ0123456789!"#$%A=v', 'raise': True},
     ]
     provider += key_check_normal
@@ -60,16 +60,16 @@ def provider_validate_key_value_pairs():
         {'d': u' =v', 'raise': True},
         # upper limit
         {'d': u' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567'
-              u'89!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
-              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]^'
-              u'_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123'
-              u'456789!"#$=v', 'raise': True},
+              u'89!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyz'
+              u'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\'
+              u']^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01'
+              u'23456789!"#$=v', 'raise': True},
         # upper limit + 1
         {'d': u' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678'
-              u'9!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzAB'
-              u'CDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]^_'
-              u'`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234'
-              u'56789!"#$A=v', 'raise': True},
+              u'9!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
+              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\]'
+              u'^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
+              u'3456789!"#$A=v', 'raise': True},
     ]
     provider += key_check_starts_space
 
@@ -77,14 +77,14 @@ def provider_validate_key_value_pairs():
     key_check_normal = [
         # upper limit
         {'d': u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678'
-              u'9!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
-              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]'
+              u'9!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
+              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\]'
               u'^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01'
               u'23456789!"#$ =v', 'raise': True},
         # upper limit + 1
         {'d': u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678'
-              u'9!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
-              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]'
+              u'9!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
+              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\]'
               u'^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01'
               u'23456789!"#$% =v', 'raise': True},
     ]
@@ -94,16 +94,16 @@ def provider_validate_key_value_pairs():
     key_check_middle_space = [
         # upper limit
         {'d': u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678'
-              u'9 !"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyz'
-              u'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]'
-              u'^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
-              u'3456789!"#$=v', 'raise': False},
+              u'9 !"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyz'
+              u'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\'
+              u']^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01'
+              u'23456789!"#$=v', 'raise': False},
         # upper limit + 1
         {'d': u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-              u' !"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzAB'
-              u'CDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]^_'
-              u'`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234'
-              u'56789!"#$A=v', 'raise': True},
+              u' !"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
+              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\]'
+              u'^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
+              u'3456789!"#$A=v', 'raise': True},
     ]
     provider += key_check_middle_space
 
@@ -128,16 +128,16 @@ def provider_validate_key_value_pairs():
     value_check_normal = [
         # upper limit
         {'d': u'k=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567'
-              u'89!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
-              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]^'
-              u'_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123'
-              u'456789!"#$%', 'raise': False},
+              u'89!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyz'
+              u'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\'
+              u']^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01'
+              u'23456789!"#$%', 'raise': False},
         # upper limit + 1
         {'d': u'k=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567'
-              u'89!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzA'
-              u'BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]^'
-              u'_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123'
-              u'456789!"#$%A', 'raise': True},
+              u'89!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyz'
+              u'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\\'
+              u']^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01'
+              u'23456789!"#$%A', 'raise': True},
     ]
     provider += value_check_normal
 
@@ -146,16 +146,16 @@ def provider_validate_key_value_pairs():
         {'d': u'k= ', 'raise': True},
         # upper limit
         {'d': u'k= abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456'
-              u'789!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyz'
-              u'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]'
-              u'^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
-              u'3456789!"#$', 'raise': True},
+              u'789!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxy'
+              u'zABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@['
+              u'\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+              u'0123456789!"#$', 'raise': True},
         # upper limit + 1
         {'d': u'k= abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456'
-              u'789!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyz'
-              u'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@[\]'
-              u'^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
-              u'3456789!"#$A', 'raise': True},
+              u'789!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxy'
+              u'zABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@['
+              u'\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+              u'0123456789!"#$A', 'raise': True},
     ]
     provider += value_check_starts_space
 
@@ -163,15 +163,15 @@ def provider_validate_key_value_pairs():
     value_check_normal = [
         # upper limit
         {'d': u'k=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456'
-              u'789!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxy'
+              u'789!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxy'
               u'zABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@'
-              u'[\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX'
+              u'[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX'
               u'YZ0123456789!"#$ ', 'raise': True},
         # upper limit + 1
         {'d': u'k=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456'
-              u'789!"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxy'
+              u'789!"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxy'
               u'zABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F>?@'
-              u'[\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX'
+              u'[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX'
               u'YZ0123456789!"#$% ', 'raise': True},
     ]
     provider += value_check_normal
@@ -180,15 +180,15 @@ def provider_validate_key_value_pairs():
     value_check_middle_space = [
         # upper limit
         {'d': u'k=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345'
-              u'6789 !"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuv'
+              u'6789 !"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuv'
               u'wxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F'
-              u'>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU'
+              u'>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU'
               u'VWXYZ0123456789!"#$', 'raise': False},
         # upper limit + 1
         {'d': u'k=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345'
-              u'6789 !"#$%&\'()*+,-./:;<F>?@[\]^_`{|}~abcdefghijklmnopqrstuv'
+              u'6789 !"#$%&\'()*+,-./:;<F>?@[\\]^_`{|}~abcdefghijklmnopqrstuv'
               u'wxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<F'
-              u'>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU'
+              u'>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU'
               u'VWXYZ0123456789!"#$A', 'raise': True},
     ]
     provider += value_check_middle_space
@@ -213,16 +213,16 @@ def provider_validate_one_line_string():
         {'d': u'a', 'raise': False},
         # upper limit
         {'d': u"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ012345"
-              u"6789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ abcdefghijklmnopqrst"
+              u"6789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrst"
               u"uvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456789!\"#$%&'()*+,-./:"
-              u";<=>?@[\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP"
+              u";<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP"
               u"QRSTUVwXYZ0123456789!\"#",
          'raise': False},
         # upper limit + 1
         {'d': u"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ012345"
-              u"6789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ abcdefghijklmnopqrst"
+              u"6789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrst"
               u"uvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456789!\"#$%&'()*+,-./"
-              u":;<=>?@[\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN"
+              u":;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN"
               u"OPQRSTUVwXYZ0123456789!\"#$",
          'raise': True},
 
@@ -232,16 +232,16 @@ def provider_validate_one_line_string():
         {'d': u' ', 'raise': True},
         # upper limit
         {'d': u" bcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ01234567"
-              u"89!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ abcdefghijklmnopqrstuvwx"
+              u"89!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwx"
               u"yzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456789!\"#$%&'()*+,-./:;<=>?"
-              u"@[\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV"
+              u"@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV"
               u"wXYZ0123456789!\"#",
          'raise': True},
         # upper limit + 1
         {'d': u" bcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456"
-              u"789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ abcdefghijklmnopqrstuv"
+              u"789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuv"
               u"wxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456789!\"#$%&'()*+,-./:;<"
-              u"=>?@[\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR"
+              u"=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR"
               u"STUVwXYZ0123456789!\"#a",
          'raise': True},
 
@@ -249,16 +249,16 @@ def provider_validate_one_line_string():
 
         # upper limit
         {'d': u"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456"
-              u"789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ abcdefghijklmnopqrstuv"
+              u"789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuv"
               u"wxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456789!\"#$%&'()*+,-./:;<"
-              u"=>?@[\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR"
+              u"=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR"
               u"STUVwXYZ0123456789!\" """,
          'raise': True},
         # upper limit + 1
         {'d': u"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456"
-              u"789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ abcdefghijklmnopqrstuv"
+              u"789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuv"
               u"wxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456789!\"#$%&'()*+,-./:;<"
-              u"=>?@[\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR"
+              u"=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR"
               u"STUVwXYZ0123456789!\"# """,
          'raise': True},
 

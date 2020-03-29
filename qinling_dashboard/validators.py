@@ -18,20 +18,20 @@ from django.utils.translation import ugettext_lazy as _
 
 
 STRING_VALIDATE_PATTERN = \
-    """[a-zA-Z0-9\$\[\]\(\)\{\}\*\+\?\^\s\|\.\-\\\\!#%&'",/:;=<>@_`~]"""
+    r"""[a-zA-Z0-9\$\[\]\(\)\{\}\*\+\?\^\s\|\.\-\\\\!#%&'",/:;=<>@_`~]"""
 
 MAX_LENGTH = 255
 
 
 def validate_1st_space(value):
     """Raise execption if 1st character is blank(space)"""
-    if re.match('^\s', value):
+    if re.match(r'^\s', value):
         raise ValidationError(_("1st character is not valid."))
 
 
 def validate_last_space(value):
     """Raise execption if last character is blank(space)"""
-    if re.search('\s$', value):
+    if re.search(r'\s$', value):
         raise ValidationError(_("Last character is not valid."))
 
 
@@ -42,7 +42,7 @@ def validate_one_line_string(value):
     - length <= 255
     - consist of
          abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVwXYZ0123456789"
-         !#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+         !#$%&'()*+,-./:;<=>?@[\\]^_`{|}~
     """
     base_pattern = STRING_VALIDATE_PATTERN
     pattern = '^%s{1,%s}$' % (base_pattern, MAX_LENGTH)
