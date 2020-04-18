@@ -10,14 +10,13 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-from django.urls import reverse
+from unittest import mock
 
+from django.urls import reverse
 from django.utils.http import urlunquote
 
 from qinling_dashboard import api
 from qinling_dashboard.test import helpers as test
-
-import mock
 
 
 INDEX_TEMPLATE = 'horizon/common/_data_table_view.html'

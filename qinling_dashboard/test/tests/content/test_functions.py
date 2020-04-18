@@ -11,6 +11,7 @@
 # under the License.
 
 import copy
+from unittest import mock
 
 from django.core.files import uploadedfile
 
@@ -24,8 +25,6 @@ from qinling_dashboard import api
 from qinling_dashboard.content.functions import forms as project_fm
 from qinling_dashboard.test import helpers as test
 from qinling_dashboard.utils import calculate_md5
-
-import mock
 
 
 INDEX_TEMPLATE = 'horizon/common/_data_table_view.html'

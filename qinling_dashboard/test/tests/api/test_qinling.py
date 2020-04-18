@@ -10,7 +10,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import mock
+from unittest import mock
 
 from qinling_dashboard import api
 from qinling_dashboard.test import helpers as test
