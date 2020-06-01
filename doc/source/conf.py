@@ -42,10 +42,10 @@ project = u'Qinling Dashboard'
 copyright = u'2017, OpenStack Developers'
 
 # openstackdocstheme options
-repository_name = 'openstack/qinling-dashboard'
-bug_project = '927'
-bug_tag = 'doc'
-html_last_updated_fmt = '%Y-%m-%d %H:%M'
+openstackdocs_repo_name = 'openstack/qinling-dashboard'
+openstackdocs_pdf_link = True
+openstackdocs_auto_name = False
+openstackdocs_use_storyboard = True
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
 add_function_parentheses = True
@@ -55,7 +55,7 @@ add_function_parentheses = True
 add_module_names = True
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'native'
 
 # -- Options for HTML output --------------------------------------------------
 
