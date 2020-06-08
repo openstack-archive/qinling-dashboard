@@ -24,35 +24,17 @@ from unittest import mock
 
 from django.conf import settings
 from django.contrib.messages.storage import default_storage
-from django.core.handlers import wsgi
 from django.test.client import RequestFactory
 from django.utils import http
-
-from keystoneclient.v2_0 import client as keystone_client
-
-from qinlingclient import client as qinling_client
-
-# As of Rocky, we are in the process of removing mox usage.
-# To allow mox-free horizon plugins to consume the test helper,
-# mox import is now optional. If tests depends on mox,
-# mox (or mox3) must be declared in test-requirements.txt.
-
+from horizon.test import helpers as horizon_helpers
 from openstack_auth import user
 from openstack_auth import utils
-from requests.packages.urllib3.connection import HTTPConnection
-
-from horizon.test import helpers as horizon_helpers
-
-from openstack_dashboard import api as project_api
 from openstack_dashboard import context_processors
+from requests.packages.urllib3.connection import HTTPConnection
 
 from qinling_dashboard.test.test_data import utils as test_utils
 
-
 LOG = logging.getLogger(__name__)
-
-# Makes output of failing mox tests much easier to read.
-wsgi.WSGIRequest.__repr__ = lambda self: "<class 'django.http.HttpRequest'>"
 
 # Shortcuts to avoid importing horizon_helpers and for backward compatibility.
 update_settings = horizon_helpers.update_settings
@@ -410,67 +392,6 @@ class BaseAdminViewTests(TestCase):
         store.save()
         self.session = store
         self.client.cookies[settings.SESSION_COOKIE_NAME] = store.session_key
-
-
-class APITestCase(TestCase):
-    """Testing APIs.
-
-    For use with tests which deal with the underlying clients rather than
-    stubbing out the openstack_dashboard.api.* methods.
-    """
-
-    # NOTE: This test class depends on mox but does not declare use_mox = True
-    # to notify mox is no longer recommended.
-    # If a consumer would like to use this class, declare use_mox = True.
-
-    def setUp(self):
-        super(APITestCase, self).setUp()
-        LOG.warning("APITestCase has been deprecated in favor of mock usage "
-                    "and will be removed at the beginning of 'Stein' release. "
-                    "Please convert your to use APIMockTestCase instead.")
-        utils.patch_middleware_get_user()
-
-        def fake_keystoneclient(request, admin=False):
-            """Returns the stub keystoneclient.
-
-            Only necessary because the function takes too many arguments to
-            conveniently be a lambda.
-            """
-            return self.stub_keystoneclient()
-
-        self._original_keystoneclient = project_api.keystone.keystoneclient
-        project_api.keystone.keystoneclient = fake_keystoneclient
-
-    def tearDown(self):
-        super(APITestCase, self).tearDown()
-        project_api.keystone.keystoneclient = self._original_keystoneclient
-
-    def _warn_client(self, service, removal_version):
-        LOG.warning(
-            "APITestCase has been deprecated for %(service)s-related "
-            "tests and will be removerd in '%(removal_version)s' release. "
-            "Please convert your to use APIMockTestCase instead.",
-            {'service': service, 'removal_version': removal_version}
-        )
-
-    def stub_keystoneclient(self):
-        self._warn_client('keystone', 'Stein')
-        if not hasattr(self, "keystoneclient"):
-            keystone_client.Client = mock.Mock()
-            keystone_client.Client.auth_token = 'foo'
-            keystone_client.Client.service_catalog = None
-            keystone_client.Client.tenant_id = '1'
-            keystone_client.Client.tenant_name = 'tenant_1'
-            keystone_client.Client.management_url = ""
-            keystone_client.Client.__dir__ = lambda: []
-            self.keystoneclient = keystone_client.Client
-        return self.keystoneclient
-
-    def stub_qinlingclient(self):
-        if not hasattr(self, "qinlingclient"):
-            qinling_client.Client = mock.Mock()
-            self.qinlingclient = qinling_client.Client
-        return self.qinlingclient
 
 
 class APIMockTestCase(TestCase):
