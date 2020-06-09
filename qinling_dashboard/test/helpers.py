@@ -20,6 +20,7 @@ from functools import wraps
 from importlib import import_module
 import logging
 import traceback
+from unittest import mock
 
 from django.conf import settings
 from django.contrib.messages.storage import default_storage
@@ -35,7 +36,6 @@ from qinlingclient import client as qinling_client
 # To allow mox-free horizon plugins to consume the test helper,
 # mox import is now optional. If tests depends on mox,
 # mox (or mox3) must be declared in test-requirements.txt.
-import mock
 
 from openstack_auth import user
 from openstack_auth import utils
