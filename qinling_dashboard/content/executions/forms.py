@@ -127,8 +127,8 @@ class CreateExecutionForm(forms.SelfHandlingForm):
             message = _('Created execution of "%s"') % function_id
             messages.success(request, message)
             return True
-        except Exception as e:
+        except Exception:
             redirect = reverse("horizon:project:executions:index")
             exceptions.handle(request,
-                              _("Unable to create execution. %s") % e,
+                              _("Unable to create execution."),
                               redirect=redirect)

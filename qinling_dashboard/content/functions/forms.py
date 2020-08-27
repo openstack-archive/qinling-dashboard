@@ -449,10 +449,7 @@ class CreateFunctionVersionForm(forms.SelfHandlingForm):
             message = _('Created new version of "%s"') % function_id
             messages.success(request, message)
             return True
-        except Exception as e:
+        except Exception:
             redirect = reverse("horizon:project:functions:index")
-            if hasattr(e, 'details'):
-                msg = _("Unable to create execution. %s") % e.details
-            else:
-                msg = _("Unable to create execution")
+            msg = _("Unable to create execution.")
             exceptions.handle(request, msg, redirect=redirect)
