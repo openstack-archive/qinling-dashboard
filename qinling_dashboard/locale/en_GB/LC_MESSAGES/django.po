@@ -1,13 +1,14 @@
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
+# Andi Chandler <andi@gowling.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: qinling-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-03 06:53+0000\n"
+"POT-Creation-Date: 2020-09-11 21:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-10-07 08:26+0000\n"
+"PO-Revision-Date: 2020-06-15 05:40+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -37,6 +38,9 @@ msgstr "Cancelled"
 msgid "Check this item if you would like sync execution."
 msgstr "Check this item if you would like sync execution."
 
+msgid "Check this item if you would like to create untrusted runtime"
+msgstr "Check this item if you would like to create untrusted runtime"
+
 msgid "Code"
 msgstr "Code"
 
@@ -64,6 +68,9 @@ msgstr "Create Function"
 msgid "Create Function Version"
 msgstr "Create Function Version"
 
+msgid "Create Runtime"
+msgstr "Create Runtime"
+
 msgid "Create Version"
 msgstr "Create Version"
 
@@ -73,8 +80,14 @@ msgstr "Create a new execution of function."
 msgid "Create a new function."
 msgstr "Create a new function."
 
+msgid "Create a new runtime."
+msgstr "Create a new runtime."
+
 msgid "Create a new version of function."
 msgstr "Create a new version of function."
+
+msgid "Create as Untrusted Image"
+msgstr "Create as Untrusted Image"
 
 msgid "Created At"
 msgstr "Created At"
@@ -90,6 +103,10 @@ msgstr "Created function \"%s\""
 #, python-format
 msgid "Created new version of \"%s\""
 msgstr "Created new version of \"%s\""
+
+#, python-format
+msgid "Created runtime \"%s\""
+msgstr "Created runtime \"%s\""
 
 msgctxt "current status of runtime"
 msgid "Creating"
@@ -341,15 +358,11 @@ msgstr "Sync"
 msgid "This function does not have specified version number: %s"
 msgstr "This function does not have specified version number: %s"
 
-msgid "Unable to create execution"
-msgstr "Unable to create execution"
-
-#, python-format
-msgid "Unable to create execution. %s"
-msgstr "Unable to create execution. %s"
-
 msgid "Unable to create function."
 msgstr "Unable to create function."
+
+msgid "Unable to create runtime."
+msgstr "Unable to create runtime."
 
 #, python-format
 msgid "Unable to get executions of this function \"%s\"."
