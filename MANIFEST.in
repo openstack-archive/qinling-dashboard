@@ -1,4 +1,0 @@
-recursive-include qinling_dashboard *.html *.scss *.css *.js *.map *.svg *.png *.json
-
-include AUTHORS
-include ChangeLog
